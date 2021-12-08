@@ -5,10 +5,9 @@
 
 using namespace std;
 
-bool isPossible(int n)
-{
-	
-}
+int sum;
+
+
 
 
 int main(int argc, char* argv[])
