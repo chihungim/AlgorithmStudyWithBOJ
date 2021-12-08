@@ -11,8 +11,7 @@
 *.sln.docstates
 
 #ignore
-/.cpp
-TEST.cpp/
+TEST.cpp
 
 /.cpp
 
