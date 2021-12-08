@@ -11,11 +11,7 @@
 *.sln.docstates
 
 #ignore
-TEST.cpp
-
-/.cpp
-
-TEST.cpp/
+BaekJoon/TEST.cpp
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
