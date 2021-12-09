@@ -1,17 +1,36 @@
 #include <iostream>
-#include <cmath>
-#include <array>
 using namespace std;
 
-int filter[10001];
+
+bool PrimeArray[1000001];
+
+void Erastos(int m)
+{
+	if (m <= 1) return;
+
+	for(int i = 2; i<=m; i++)
+		PrimeArray[i] = true;
+
+
+	for(int i = 2; i*i<=m; i++)
+	{
+		if (PrimeArray[i])
+			for (int j = i * i; j <= m; j += i)
+				PrimeArray[j] = false;
+	}
+}
 
 int main(int argc, char* argv[])
 {
-	int m, n;
+	int n, m;
+	cin >> n >> m;
+	Erastos(m);
 
-	
-	cin >> m >> n;
-	for (int i = 2; i <= n; i++)
-		filter[i] = i;
+
+	for(int i = n; i<=m; i++)
+	{
+		if (PrimeArray[i])
+			cout << i << "\n";
+	}
 
 }

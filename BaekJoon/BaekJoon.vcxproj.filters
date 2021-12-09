@@ -396,6 +396,12 @@
     <ClCompile Include="수학\1992.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="수학\4948.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="자료구조\우선순위 큐\1927.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
