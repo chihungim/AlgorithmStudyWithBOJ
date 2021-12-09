@@ -402,6 +402,15 @@
     <ClCompile Include="자료구조\우선순위 큐\1927.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="자료구조\우선순위 큐\11286.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="자료구조\우선순위 큐\1655.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="수학\2475.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

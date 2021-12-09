@@ -5,7 +5,7 @@
 using namespace std;
 
 
-//TODO: 나중에 풀기
+//todo: 미해결 문제
 
 int fibonacci(int n) {
     if (n <= 0) {
