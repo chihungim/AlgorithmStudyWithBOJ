@@ -414,6 +414,9 @@
     <ClCompile Include="자료구조\큐\10845.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="자료구조\큐\1966.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

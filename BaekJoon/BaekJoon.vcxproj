@@ -445,6 +445,7 @@
     <ClCompile Include="자료구조\큐\18258.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="자료구조\큐\1966.cpp" />
     <ClCompile Include="자료구조\큐\2164.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
