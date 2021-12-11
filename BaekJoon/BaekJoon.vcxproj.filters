@@ -58,6 +58,9 @@
     <Filter Include="소스 파일\탐색">
       <UniqueIdentifier>{09d68711-0f8f-4cd8-bfc0-74df878f8692}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\-분류 불가-">
+      <UniqueIdentifier>{846f54e1-f01f-4fdb-9259-003367e7550a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TEST.cpp">
@@ -415,6 +418,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="자료구조\큐\1966.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\2021 POSTECH Programming Open Contest-A번.cpp">
+      <Filter>소스 파일\구현</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\1259.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

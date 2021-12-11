@@ -4,48 +4,44 @@
 using std::cin;
 using std::cout;
 using std::priority_queue;
-
-
-struct document
-{
-	int index = 0;
-	int priority = 0;
-};
+using std::queue;
 
 int main(int argc, char* argv[])
 {
 	int t = 0;
 	cin >> t;
-
-	auto comp = [](document d1, document d2)
-	{
-		if (d1.priority == d2.priority)
-			return d1.index < d2.index;
-		return d1.priority < d2.priority;
-	};
 	
 	while (t--)
 	{
 		int n = 0, m = 0; //n-> 문서의 개수, m-> 현재 문서의 위치
 		cin >> n >> m;
-		priority_queue<document, std::vector<document>, decltype(comp)> pq(comp);
-
-		for (int i = 0; i < n; i++)
+		queue<std::pair<int, int>>q;
+		priority_queue<int> pq;
+		for(int i = 0; i<n; i++)
 		{
-			document doc;
-			cin >> doc.priority;
-			doc.index = i;
-			pq.push(doc);
+			int val;
+			cin >> val;
+			q.push({i,val});
+			pq.push(val);
 		}
-
-		int order = 0;
-		
-		while(pq.top().index != m )
+		int cnt = 0.;
+		while(!q.empty())
 		{
-			order++;
-			pq.pop();
+			int idx = q.front().first;
+			int v = q.front().second;
+			q.pop();
+			if (pq.top() == v)
+			{
+				pq.pop();
+				cnt++;
+				if(idx == m)
+				{
+					cout << cnt << "\n";
+					break;
+				}
+			}
+			else
+				q.push({ idx, v });
 		}
-
-		cout << order << "\n";
 	}
 }
