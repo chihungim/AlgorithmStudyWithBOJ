@@ -420,13 +420,16 @@
     <ClCompile Include="자료구조\큐\1966.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="구현\2021 POSTECH Programming Open Contest-A번.cpp">
+    <ClCompile Include="구현\23813.cpp">
       <Filter>소스 파일\구현</Filter>
     </ClCompile>
     <ClCompile Include="구현\1259.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="자료구조\큐\1158.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\DFS\11724.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
