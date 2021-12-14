@@ -1,88 +1,91 @@
-#include <array>
-#include <cstring>
+#include <vector>
 #include <iostream>
 #include <queue>
-
-#define MAX 1001
+#include <array>
 
 using namespace std;
 
-int dirX[] = { 0,1,0,-1 };
-int dirY[] = { 1,0,-1,0 };
-
-array<array<int, MAX>, MAX> farm;
-int dist[MAX][MAX] = {0,};
-
-void display();
-
 int m, n;
-int bfs(int r, int c);
-int day = 0;
-vector<pair<int, int>> togo;
+array<array<int, 1001>, 1001> farm = {0,};
+array<array<int, 1001>, 1001> day;
+void bfs();	
+void showFarm();
 
 int main(int argc, char* argv[])
 {
 	cin >> m >> n;
-	memset(dist, -1, sizeof dist);
+
+	for(int i = 0; i<n; i++)
+		day[i].fill(1);
+	//1로 초기화
+
 	
 	for(int i = 0; i<n; i++)
 		for(int j = 0; j<m; j++)
 		{
 			cin >> farm[i][j];
-			if (farm[i][j] == 1)
-				togo.emplace_back(i, j);
 		}
 
-
-		for(auto go: togo)
-			cout << bfs(go.first, go.second) << "\n";
-		
-}
-
-int bfs(int r, int c)
-{
-	dist[r][c] = 0;
-	queue<pair<int, int>> que;
-	que.emplace(r, c);
-
-
-	while(!que.empty())
-	{
-		r = que.front().first;
-		c = que.front().second;
+	bfs();
 	
-		que.pop();
-
-		display();
-		
-		for(int i = 0; i<4; i++)
-		{
-			int dy = r + dirY[i], dx = c + dirX[i];
-			if (dy < 0 || dy >= n || dx < 0 || dx >= m) continue;
-			if (farm[dy][dx] == 1 || farm[dy][dx] == -1) continue;
-			if (dist[dy][dx] != -1) continue;
-			farm[dy][dx] = 1;
-			dist[dy][dx] = dist[r][c] + 1;
-			que.emplace(dy, dx);
+	int result = 0;
+	
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (farm[i][j] == 0) {
+				cout << "-1\n";
+				return 0;
+			}
+			if (result < day[i][j]) {
+				result = day[i][j];
+			}
 		}
 	}
+	cout << result -1;
 
-	return day;
+	return 0;
 }
 
-void display()
+void bfs()
 {
-	cout << "\n";
-	cout << "--------------\n";
-	
+	queue<pair<int, int>> q; //towa sama maji tensi -> tomato
 	for (int i = 0; i < n; i++)
-	{
 		for (int j = 0; j < m; j++)
+			if (farm[i][j] == 1)
+				q.emplace(i, j);
+
+	int dirX[] = { 1,0,-1,0 };
+	int dirY[] = { 0,1,0,-1 };
+	
+	while(!q.empty())
+	{
+		const int r = q.front().first;
+		const int c = q.front().second;
+		q.pop();
+
+		for(int i = 0; i<4; i++)
+		{
+			int dy = r + dirY[i];
+			int dx = c + dirX[i];
+			if (dy < 0 || dy >= n || dx < 0 || dx >= m) continue;
+			if (farm[dy][dx] == -1 || farm[dy][dx] == 1) continue;
+			farm[dy][dx] = 1;
+			day[dy][dx] = day[r][c] + 1;
+			q.emplace(dy, dx);
+		}
+		//showFarm();
+	}
+}
+
+void showFarm()
+{
+	cout << "-----------------------\n";
+	for(int i = 0; i<n; i++)
+	{
+		for(int j = 0; j<m; j++)
 		{
 			cout << farm[i][j] << " ";
 		}
 		cout << "\n";
 	}
 }
-
-

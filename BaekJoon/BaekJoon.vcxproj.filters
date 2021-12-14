@@ -432,6 +432,21 @@
     <ClCompile Include="그래프 이론\DFS\11724.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="자료구조\덱\3190.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="자료구조\스택\3986.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\5338.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\14502.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\7569.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

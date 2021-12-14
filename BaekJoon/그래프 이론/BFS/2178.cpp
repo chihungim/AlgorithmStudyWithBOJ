@@ -11,7 +11,7 @@ int map[MAX][MAX] = { 0, };
 int dist[MAX][MAX] = {-1,};
 int dirX[] = { 0,1,0,-1 };
 int dirY[] = { 1,0,-1,0 };
-int bfs(int r, int c);
+int possibilities(int r, int c);
 
 int main(int argc, char* argv[])
 {
@@ -31,10 +31,10 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	cout << bfs(0, 0);
+	cout << possibilities(0, 0);
 }
 
-int bfs(int r, int c)
+int possibilities(int r, int c)
 {
 	queue<pair<int, int>> que;
 	que.emplace(r, c);
