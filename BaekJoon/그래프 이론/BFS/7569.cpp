@@ -87,8 +87,10 @@ void bfs()
 
 void showState()
 {
+	cout << "-----------------------\n";
 	for (int i = 0; i < h; i++) {
 		cout << "f:" << i << "\n";
+		cout << "\n";
 		for (int j = 0; j < n; j++) {
 			for (int k = 0; k < m; k++) {
 				cout << farm[i][j][k] << "  ";
