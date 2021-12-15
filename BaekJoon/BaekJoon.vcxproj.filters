@@ -474,6 +474,18 @@
     <ClCompile Include="자료구조\해시를 사용한 집합과 맵\1764.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="정렬\20551.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\5525.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\1325.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\9653.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
