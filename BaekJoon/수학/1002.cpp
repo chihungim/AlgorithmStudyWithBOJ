@@ -10,7 +10,7 @@ struct circle
 
 int main(int argc, char* argv[])
 {
-	int t = 0;
+	int t = 0;	
 	cin >> t;
 	while (t--)
 	{
