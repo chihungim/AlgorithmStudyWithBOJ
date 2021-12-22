@@ -11,6 +11,7 @@ array<array<array<int, 101>, 101>, 101> farm = { 0, };
 array<array<array<int, 101>, 101>, 101> day; // == distance
 void bfs();
 void showState();
+
 int main(int argc, char* argv[])
 {
 	cin >> m >> n >> h;

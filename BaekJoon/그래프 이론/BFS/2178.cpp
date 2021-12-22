@@ -46,8 +46,6 @@ int possibilities(int r, int c)
 		c = que.front().second;
 		que.pop();
 
-
-		
 		if (r == n-1 && c == m-1)
 			return dist[r][c];
 		

@@ -10,7 +10,6 @@ int main(int argc, char* argv[])
 	ios_base::sync_with_stdio(false);
 
 	set<int> s;
-	set<int> allSet = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
 	int m;
 	cin >> m;
 	while(m--)
@@ -39,7 +38,7 @@ int main(int argc, char* argv[])
 				s.insert(x);
 		}else if(cmd == "all")
 		{
-			s = allSet;
+			s = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
 		}else if(cmd == "empty")
 		{
 			s.clear();

@@ -1,14 +1,14 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#define ull unsigned long long
+#define ULL unsigned long long
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	ull sum = 0;
-	ull input;
+	ULL sum = 0;
+	ULL input;
 	cin >> input;
 
 	string str = to_string(input);
