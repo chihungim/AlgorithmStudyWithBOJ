@@ -2,7 +2,8 @@
 #include <iostream>
 #include <queue>
 #include <array>
-
+#include <algorithm>
+#include <stdlib.h>
 using namespace std;
 
 int m, n;
@@ -19,12 +20,10 @@ int main(int argc, char* argv[])
 		day[i].fill(1);
 	//1로 초기화
 
-	
+
 	for(int i = 0; i<n; i++)
 		for(int j = 0; j<m; j++)
-		{
 			cin >> farm[i][j];
-		}
 
 	bfs();
 	
