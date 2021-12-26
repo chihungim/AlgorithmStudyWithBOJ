@@ -35,8 +35,7 @@ int main(int argc, char* argv[])
 	{
 		int x1, y1, x2, y2;
 		cin >> x1 >> y1 >> x2 >> y2;
-		int ent = 0, dep = 0;
-		int n;
+		int ent = 0, dep = 0,n;
 		cin >> n;
 		while (n--)
 		{
