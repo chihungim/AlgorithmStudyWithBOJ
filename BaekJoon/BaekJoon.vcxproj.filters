@@ -522,7 +522,7 @@
     <ClCompile Include="자료구조\집합(set)\11723.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="그래프 이론\Floyd Warshall\11403.cpp">
+    <ClCompile Include="그래프 이론\Floyd Warshall\11404.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="구현\11659.cpp">
@@ -559,6 +559,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="수학\10870.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\Dijkstra\1504.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\1938.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

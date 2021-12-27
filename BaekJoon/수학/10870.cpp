@@ -1,17 +1,17 @@
 #include <iostream>
+#include <cmath>
+#include <cfloat>
+#define ull unsigned long long
 
-
-int fibo(int n)
+ull fibo(ull n)
 {
-	if (n <= 1)
-		return n;
-
-	return fibo(n - 1) + fibo(n - 2);
+	double sqrt5 = sqrt(5);
+	return fabsl(1 / sqrt5 * (pow((1 + sqrt5) / 2, n) - pow((1 - sqrt5) / 2, n)));
 }
 
 int main(int argc, char* argv[])
 {
-	int n;
+	ull n;
 	std::cin >> n;
 	std::cout << fibo(n);
 }

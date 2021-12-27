@@ -7,7 +7,7 @@ constexpr int INF = 10000000;
 
 using namespace std;
 
-int v, e, k;
+int n, e, k;
 //int path[2][20001] = { {0,}, };  //거리,방문여부
 vector<pair<int, int>> edge[20001];
 int dist[20001] = { 0, };
@@ -20,11 +20,11 @@ int main(int argc, char* argv[])
 	cout.tie(nullptr);
 	ios_base::sync_with_stdio(false);
 	
-	cin >> v >> e;
+	cin >> n >> e;
 	cin >> k;
 
 	
-	for (int i = 1; i <= v; i++)
+	for (int i = 1; i <= n; i++)
 		dist[i] = INF;
 
 	for(int i  = 0; i<e; i++)
@@ -32,12 +32,12 @@ int main(int argc, char* argv[])
 		int v, u,dis;
 		cin >> v >> u >> dis;
 		edge[v].push_back({ u,dis });
-		//edge[u].push_back({ v,dis });
+		//edge[u].push_back({ n,dis });
 	}
 
 	dijkstra();
 
-	for(int i = 1; i<=v; i++)
+	for(int i = 1; i<=n; i++)
 	{
 		if (dist[i] == INF)
 			cout << "INF\n";
@@ -70,10 +70,6 @@ void dijkstra()
 				pq.push(make_pair(-dist[Next], Next));
 			}
 		}
-
-
-
-		
 	}
 }
 
@@ -81,27 +77,27 @@ void dijkstra()
 //
 //int main()
 //{
-//	cin >> v >> e;
+//	cin >> n >> e;
 //	cin >> k;
 //
-//	for (int i = 1; i <= v; i++)
-//		for (int j = i + 1; j <= v; j++)
+//	for (int i = 1; i <= n; i++)
+//		for (int j = i + 1; j <= n; j++)
 //			adjMap[i][j] = adjMap[j][i] = INF;
 //
 //
 //	for (int i = 0; i < e; i++)
 //	{
-//		int v = 0, u = 0;
-//		cin >> v >> u;
-//		cin >> adjMap[v][u]; //간선 수치
-//		adjMap[u][v] = adjMap[v][u];
+//		int n = 0, u = 0;
+//		cin >> n >> u;
+//		cin >> adjMap[n][u]; //간선 수치
+//		adjMap[u][n] = adjMap[n][u];
 //	}
 //
 //
 //	dijkstra();
 //
 //
-//	for (int i = 1; i <= v; i++)
+//	for (int i = 1; i <= n; i++)
 //	{
 //			cout << path[0][i] << "\n";
 //	}
@@ -109,15 +105,15 @@ void dijkstra()
 //
 //void dijkstra()
 //{
-//	for (int i = 1; i <= v; i++)
+//	for (int i = 1; i <= n; i++)
 //		path[0][i] = adjMap[k][i];
 //
 //	path[1][k] = true;
 //
-//	for (int i = 1; i <= v; i++)
+//	for (int i = 1; i <= n; i++)
 //	{
 //		int min = 2147483647, idx = 0;
-//		for (int j = 1; j <= v; j++)
+//		for (int j = 1; j <= n; j++)
 //			if (path[0][j] < min && !path[1][j])
 //			{
 //				min = path[0][j];
@@ -126,7 +122,7 @@ void dijkstra()
 //		path[1][idx] = true;
 //		const int from = idx;
 //
-//		for (int to = 1; to <= v; to++)
+//		for (int to = 1; to <= n; to++)
 //		{
 //			if (!path[1][to] && path[0][from] + adjMap[from][to] < path[0][to])
 //				path[0][to] = path[0][from] + adjMap[from][to];

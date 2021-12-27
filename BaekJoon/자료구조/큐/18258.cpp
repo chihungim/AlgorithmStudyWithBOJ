@@ -3,7 +3,7 @@
 #include<queue>
 using namespace std;
 
-int N, x;
+int n, x;
 string s;
 queue<int> q;
 
@@ -14,9 +14,9 @@ int main()
 	cin.tie(NULL);
 	cin.sync_with_stdio(false);
 
-	cin >> N;
+	cin >> n;
 
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < n; i++)
 	{
 		cin >> s;
 

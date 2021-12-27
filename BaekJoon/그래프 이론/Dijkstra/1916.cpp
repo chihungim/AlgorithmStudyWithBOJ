@@ -7,7 +7,7 @@ constexpr int INF = 1000000000;
 
 using namespace std;
 
-int v, e;
+int n, e;
 int dep, arv;
 //int path[2][20001] = { {0,}, };  //거리,방문여부
 vector<pair<int, int>> edge[1001];
@@ -21,9 +21,9 @@ int main(int argc, char* argv[])
 	cout.tie(nullptr);
 	ios_base::sync_with_stdio(false);
 
-	cin >> v >> e;
+	cin >> n >> e;
 
-	for (int i = 1; i <= v; i++)
+	for (int i = 1; i <= n; i++)
 		dist[i] = INF;
 
 	for (int i = 0; i < e; i++)
