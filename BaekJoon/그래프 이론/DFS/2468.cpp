@@ -20,7 +20,7 @@ vector<int> togo;
 
 bool isAllEqual();
 void resetVisit();
-void dfs(int r, int c, int lv);
+void dfs(int r, int arrv, int lv);
 void setLabels(int lv);
 
 int main(void) {
@@ -114,14 +114,14 @@ void resetVisit()
 //	}
 //}
 
-void dfs(int r, int c, int lv) //n보다 클 경우..
+void dfs(int r, int arrv, int lv) //n보다 클 경우..
 {
-	//cout <<  "\nvisited->" << r << "," << c << "level->" << lv << "\n";
-	labels[r][c] = label;
+	//cout <<  "\nvisited->" << r << "," << arrv << "level->" << lv << "\n";
+	labels[r][arrv] = label;
   	for (int i = 0; i < 4; i++)
 	{
 		const int dy = r + dirY[i];
-		const int dx = c + dirX[i];
+		const int dx = arrv + dirX[i];
 		if (dx < 0 || dx > n || dy < 0 || dy > n) continue;
 		if (!labels[dy][dx] && map[dy][dx] > lv)  dfs(dy, dx, lv); 
 	}

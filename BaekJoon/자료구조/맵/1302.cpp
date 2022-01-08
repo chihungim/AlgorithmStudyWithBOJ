@@ -3,22 +3,26 @@
 
 using namespace std;
 
-map<string, int> m;
-
 int main(int argc, char* argv[])
 {
+	map<string, int, less<>> m;
+
 	int n;
 	cin >> n;
-	for(int i = 0; i<n; i++)
+	while(n--)
 	{
-		string data;
-		cin >> data;
-		m[data] = 0;
+		string title;
+		cin >> title;
+		auto itr = m.insert({ title, 1 });
+		if (!itr.second)
+			m[title]++;
 	}
 
+	multimap<int, string, greater<>> m_map;
+	for (auto& it : m)
+		m_map.insert({ it.second, it.first });
 
-	for(int i = 0; i<n; i++)
-	{
-		
-	}
+	cout << m_map.begin()->second;
+	
+	return 0;
 }
