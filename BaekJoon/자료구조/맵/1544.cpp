@@ -5,9 +5,26 @@
 
 using namespace std;
 
-bool check()
+map<string, int> str_map;
+
+bool Exists(string str)
 {
+	string temp = str;
+	temp.push_back(temp.front());
+	temp.erase(0, 1);
 	
+	if (str_map.find(temp) != str_map.end())
+		return false;
+
+	while(temp != str)
+	{
+		temp.push_back(temp.front());
+		temp.erase(0, 1);
+		if (str_map.find(temp) != str_map.end())
+			return false;
+	}
+
+	return true;
 }
 
 int main(int argc, char* argv[])
@@ -16,15 +33,14 @@ int main(int argc, char* argv[])
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	
-	map<string, int> str_map;
 	int n;
 	cin >> n;
 	while(n--)
 	{
 		string str;
 		cin >> str;
-		sort(str.begin(), str.end());
-		str_map[str] = 0;
+		if(Exists(str))
+			str_map.insert({ str,0 });
 	}
 
 	cout << str_map.size() << "\n";
