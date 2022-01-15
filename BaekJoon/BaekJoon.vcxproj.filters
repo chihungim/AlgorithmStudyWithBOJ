@@ -750,6 +750,15 @@
     <ClCompile Include="구현\2480.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="구현\1205.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="구현\1212.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="정렬\2752.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
