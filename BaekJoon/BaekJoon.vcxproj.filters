@@ -798,6 +798,15 @@
     <ClCompile Include="구현\1308.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="정렬\10867.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\11060.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\BFS\11725.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
