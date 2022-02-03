@@ -4,7 +4,7 @@
 using namespace std;
 
 int adj[MAX_V][MAX_V] = { {0,}, };
-bool visited[MAX_V] = { false, };
+bool visit[MAX_V] = { false, };
 bool connected(int v, int u);
 void reset();
 void dfs(int s);
@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 void reset()
 {
 	for(int i = 0; i<n; i++)
-		visited[i] = false;
+		visit[i] = false;
 }
 
 bool connected(int v, int u)
@@ -40,10 +40,10 @@ bool connected(int v, int u)
 
 void dfs(int v)
 {
-	visited[v] = true;
+	visit[v] = true;
 	for(int u = 1; u<=n; u++)
 	{
-		if (connected(v, u) && !visited[u])
+		if (connected(v, u) && !visit[u])
 		{
 			cnt++;
 			dfs(u);

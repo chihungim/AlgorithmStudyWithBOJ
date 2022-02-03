@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool visited[1001] = { 0, };
+bool visit[1001] = { 0, };
 
 vector <int> map(1001);
 
@@ -27,7 +27,7 @@ int bfs(int startPos){
 	queue<pair<int,int>> q; //len..dir
 
 	q.emplace(0, startPos);
-	visited[startPos] = true;
+	visit[startPos] = true;
 
 	while (!q.empty()) {
 		auto len = q.front().first;
@@ -38,9 +38,9 @@ int bfs(int startPos){
 			return len;
 
 		for (auto nextPos = cirPos + 1; nextPos <= cirPos + map[cirPos]; nextPos++)
-			if (!visited[nextPos])
+			if (!visit[nextPos])
 			{
-				visited[nextPos] = true;
+				visit[nextPos] = true;
 				q.push({ len + 1,nextPos });
 			}
 	}

@@ -25,7 +25,7 @@ int n;
 
 vector<rc> _log;
 vector<rc> goal;
-vector<tuple<rc, rc, rc>> visited;
+vector<tuple<rc, rc, rc>> visit;
 array <string, 51> flat;
 
 int bfs(vector<rc> _log);
@@ -206,7 +206,7 @@ int bfs(vector<rc> _log)
 {
 	queue<tuple<rc, rc, rc, int>> q;
 	q.emplace(_log[0], _log[1], _log[2], 0);
-	visited.emplace_back(_log[0], _log[1], _log[2]);
+	visit.emplace_back(_log[0], _log[1], _log[2]);
 	
 	while (!q.empty())
 	{
@@ -228,30 +228,30 @@ int bfs(vector<rc> _log)
 		if (make_tuple(p1, p2, p3) == make_tuple(goal[0], goal[1], goal[2]))
 			return dep;
 
-		if (find(visited.begin(), visited.end(), make_tuple(get<0>(u), get<1>(u), get<2>(u))) == visited.end())
+		if (find(visit.begin(), visit.end(), make_tuple(get<0>(u), get<1>(u), get<2>(u))) == visit.end())
 		{
 			q.push(u);
-			visited.emplace_back(get<0>(u), get<1>(u), get<2>(u));
+			visit.emplace_back(get<0>(u), get<1>(u), get<2>(u));
 		}
-		if (find(visited.begin(), visited.end(), make_tuple(get<0>(d), get<1>(d), get<2>(d))) == visited.end())
+		if (find(visit.begin(), visit.end(), make_tuple(get<0>(d), get<1>(d), get<2>(d))) == visit.end())
 		{
 			q.push(d);
-			visited.emplace_back(get<0>(d), get<1>(d), get<2>(d));
+			visit.emplace_back(get<0>(d), get<1>(d), get<2>(d));
 		}
-		if (find(visited.begin(), visited.end(), make_tuple(get<0>(l), get<1>(l), get<2>(l))) == visited.end())
+		if (find(visit.begin(), visit.end(), make_tuple(get<0>(l), get<1>(l), get<2>(l))) == visit.end())
 		{
 			q.push(l);
-			visited.emplace_back(get<0>(l), get<1>(l), get<2>(l));
+			visit.emplace_back(get<0>(l), get<1>(l), get<2>(l));
 		}
-		if (find(visited.begin(), visited.end(), make_tuple(get<0>(r), get<1>(r), get<2>(r))) == visited.end())
+		if (find(visit.begin(), visit.end(), make_tuple(get<0>(r), get<1>(r), get<2>(r))) == visit.end())
 		{
 			q.push(r);
-			visited.emplace_back(get<0>(r), get<1>(r), get<2>(r));
+			visit.emplace_back(get<0>(r), get<1>(r), get<2>(r));
 		}
-		if (find(visited.begin(), visited.end(), make_tuple(get<0>(t), get<1>(t), get<2>(t))) == visited.end())
+		if (find(visit.begin(), visit.end(), make_tuple(get<0>(t), get<1>(t), get<2>(t))) == visit.end())
 		{
 			q.push(t);
-			visited.emplace_back(get<0>(t), get<1>(t), get<2>(t));
+			visit.emplace_back(get<0>(t), get<1>(t), get<2>(t));
 		}
 	}
 	return 0;

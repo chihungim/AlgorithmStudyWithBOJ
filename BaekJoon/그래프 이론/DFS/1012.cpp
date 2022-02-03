@@ -14,7 +14,7 @@ int dirX[] = { -1, 1, 0, 0 };
 int dirY[] = { 0, 0, 1, -1 };
 
 int map[MAX][MAX] = {{0,},};
-bool visited[MAX][MAX] = {{false,},};
+bool visit[MAX][MAX] = {{false,},};
 bool chkEmpty();
 void bfs(int r, int c); 
 void dfs(int r, int c);
@@ -48,7 +48,7 @@ void clearMap()
 	togo.shrink_to_fit();
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < m; j++)
-			map[i][j] = visited[i][j] = false;
+			map[i][j] = visit[i][j] = false;
 }
 
 void display()
@@ -69,10 +69,10 @@ int cntArea()
 	int cnt = 0;
 	for(auto to : togo)
 	{
-		if (!visited[to.first][to.second])
+		if (!visit[to.first][to.second])
 		{
 			cnt++;
-			visited[to.first][to.second] = true;
+			visit[to.first][to.second] = true;
 			bfs(to.first, to.second);
 		}
 	}
@@ -102,14 +102,14 @@ void bfs(int r, int c)
 	{
 		r = que.front().first;
 		c = que.front().second;
-		visited[r][c] = true;
+		visit[r][c] = true;
 		que.pop();
 		for(int i = 0; i<4; i++)
 		{
 			int dy = r + dirY[i];
 			int dx = c + dirX[i];
 			if (dy < 0 || dy >= n || dx < 0 || dx >= m) continue;
-			if (map[dy][dx] && !visited[dy][dx]) { que.emplace(dy, dx); visited[dy][dx] = true; }
+			if (map[dy][dx] && !visit[dy][dx]) { que.emplace(dy, dx); visit[dy][dx] = true; }
 		}
 	}
 }

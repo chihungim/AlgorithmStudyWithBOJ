@@ -5,17 +5,17 @@ using namespace std;
 
 constexpr int MAX = 100000 + 1;
 int N;
-bool visited[MAX];
+bool visit[MAX];
 int parent[MAX];
 vector<int> tree[MAX];
 
 void findParent(int nodeNum)
 {
-	visited[nodeNum] = true;
+	visit[nodeNum] = true;
 	for (int i = 0; i < tree[nodeNum].size(); i++)
 	{
 		int next = tree[nodeNum][i];
-		if (!visited[next])
+		if (!visit[next])
 		{
 			parent[next] = nodeNum;
 			findParent(next);

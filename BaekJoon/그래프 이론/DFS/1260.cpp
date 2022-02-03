@@ -5,7 +5,7 @@
 using namespace std;
 
 int adjMAT[MAX_V][MAX_V] = { {0,}, };
-bool visited[MAX_V] = { false, };
+bool visit[MAX_V] = { false, };
 bool connected(int v, int u);
 void reset();
 void bfs(int v);
@@ -38,16 +38,16 @@ bool connected(int v, int u)
 void reset()
 {
 	for(int i = 1; i<=n; i++)
-		visited[i] = false;
+		visit[i] = false;
 }
 
 void dfs(int v)
 {
-	visited[v] = true;
+	visit[v] = true;
 	cout << v << " ";
 	for(int i = 1; i<=n; i++)
 	{
-		if (connected(v, i) && !visited[i])
+		if (connected(v, i) && !visit[i])
 			dfs(i);
 	}
 }
@@ -55,7 +55,7 @@ void dfs(int v)
 void bfs(int v)
 {
 	reset();
-	visited[v] = true;
+	visit[v] = true;
 	queue<int> queue;
 	queue.push(v);
 	cout << v << " ";
@@ -64,11 +64,11 @@ void bfs(int v)
 		queue.pop();
 		for(int u = 1; u<=n; u++) 
 		{
-			if(connected(v,u) && !visited[u])
+			if(connected(v,u) && !visit[u])
 			{
 				queue.push(u);
 				cout << u << " ";
-				visited[u] = true;
+				visit[u] = true;
 			}
 		}
 	} 
