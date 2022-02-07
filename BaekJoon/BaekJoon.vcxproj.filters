@@ -822,6 +822,9 @@
     <ClCompile Include="그래프 이론\DFS\16173.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="누적 합\2167.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
