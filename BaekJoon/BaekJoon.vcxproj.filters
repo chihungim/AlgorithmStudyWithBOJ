@@ -840,6 +840,12 @@
     <ClCompile Include="그래프 이론\DFS\24479.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="그래프 이론\DFS\24480.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\DFS\24481.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
