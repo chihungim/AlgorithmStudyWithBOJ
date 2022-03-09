@@ -471,7 +471,10 @@
     <ClCompile Include="그래프 이론\DFS\24481.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="그래프 이론\DFS\24482.cpp" />
+    <ClCompile Include="그래프 이론\DFS\24482.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\DFS\24483.cpp" />
     <ClCompile Include="그래프 이론\Floyd Warshall\1389.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
