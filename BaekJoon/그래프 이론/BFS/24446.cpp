@@ -10,7 +10,7 @@ int visited[100001];
 
 int main(int argc, char* argv[])
 {
-	fill(begin(visited), end(visited), -1);
+	fill(begin(depth), end(depth), -1);
 
 	int n, m, r, depth = 0;
 	cin >> n >> m >> r;
@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	}
 
 	queue<pair<int, int>> q;
-	visited[r] = depth;
+	depth[r] = depth;
 	q.push({ r,depth });
 
 	while (!q.empty())
@@ -32,15 +32,15 @@ int main(int argc, char* argv[])
 		int _depth = q.front().second;
 		q.pop();
 		for (const auto to : graph[cur])
-			if (visited[to] == -1)
+			if (depth[to] == -1)
 			{
-				visited[to] = _depth + 1;
+				depth[to] = _depth + 1;
 				q.push({ to, _depth + 1 });
 			}
 	}
 
 	for (int i = 1; i <= n; i++)
-		cout << visited[i] << "\n";
+		cout << depth[i] << "\n";
 
 	return 0;
 }
