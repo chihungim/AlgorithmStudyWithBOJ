@@ -23,9 +23,9 @@ int main(int argc, char* argv[])
 	cout.tie(nullptr);
 	ios_base::sync_with_stdio(false);
 	
-	cin >> n >> e;
+	cin >> n >> x;
 
-	while(e--){
+	while(x--){
 		int v, u, cost;
 		cin >> v >> u >> cost;
 		edge[v].emplace_back(u,cost);

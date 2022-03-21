@@ -876,6 +876,12 @@
     <ClCompile Include="구현\11719.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="구현\8871.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="그래프 이론\Dijkstra\1238.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

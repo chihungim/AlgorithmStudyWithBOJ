@@ -22,8 +22,8 @@ int main()
 
 		if (s == "push")
 		{
-			cin >> x;
-			q.push(x);
+			cin >> m;
+			q.push(m);
 		}
 		else if (s == "pop")
 		{

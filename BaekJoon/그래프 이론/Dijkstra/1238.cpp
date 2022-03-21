@@ -7,62 +7,67 @@ constexpr int INF = 10000000;
 
 using namespace std;
 
-int n, e, k;
+int n, m, x;
 //int path[2][20001] = { {0,}, };  //거리,방문여부
 vector<pair<int, int>> edge[20001];
 int dist[20001] = { 0, };
-
-void dijkstra();
+int resdist[1001];
+void dijkstra(int s);
 
 int main(int argc, char* argv[])
 {
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	ios_base::sync_with_stdio(false);
-	
-	cin >> n >> x;
-	cin >> k;
 
-	
-	for (int i = 1; i <= n; i++)
-		dist[i] = INF;
+	cin >> n >> m;
+	cin >> x;
 
-	for(int i  = 0; i<x; i++)
+
+
+
+	for (int i = 0; i < m; i++)
 	{
-		int v, u,dis;
+		int v, u, dis;
 		cin >> v >> u >> dis;
 		edge[v].push_back({ u,dis });
-		//edge[u].push_back({ n,dis });
 	}
-
-	dijkstra();
 
 	for(int i = 1; i<=n; i++)
 	{
-		if (dist[i] == INF)
-			cout << "INF\n";
-		else
-			cout << dist[i] << "\n";
+		dijkstra(i);
+		resdist[i] = dist[x];
 	}
-	
+
+	dijkstra(x);
+
+	int res = 0;
+	for (int i = 1; i <= n; i++) {
+		resdist[i] += dist[i];
+		res = max(res, resdist[i]);
+	}
+
+	cout << res;
 }
 
-void dijkstra()
+void dijkstra(int s)
 {
+	for (int i = 1; i <= n; i++)
+		dist[i] = INF;
 	priority_queue<pair<int, int>> pq;
-	dist[k] = 0;
-	pq.push({ 0,k });
-	
-	while(!pq.empty())
+	dist[s] = 0;
+	pq.push({ 0,s });
+
+	while (!pq.empty())
 	{
 		const int cost = -pq.top().first;
-		const int cur = pq.top().second;
+		const int from = pq.top().second;
 		pq.pop();
-		//if (dist[cur] < cost) continue;
-		for (int i = 0; i < edge[cur].size(); i++)
+
+		for (auto& to : edge[from])
 		{
-			int Next = edge[cur][i].first;
-			int nCost = edge[cur][i].second;
+			int Next = to.first;
+			int nCost = to.second;
 
 			if (dist[Next] > cost + nCost)
 			{
