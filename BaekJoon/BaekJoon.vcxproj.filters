@@ -69,7 +69,7 @@
     <ClCompile Include="비트 마스킹\9527.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="정렬\10825.cpp">
+    <ClCompile Include="정렬\2693.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
