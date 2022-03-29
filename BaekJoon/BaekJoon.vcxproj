@@ -154,7 +154,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="정렬\11728.cpp" />
+    <ClCompile Include="트리\1991.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
