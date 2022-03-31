@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 
 		if (_x < 1 || _x > 1000000) continue;
 
-		if (!visited[_x - 1])
+		if (!visited[_x - 1]) //순서만 바꿨는데 아무래도 _x - 1이 오는 녀석들이 항상 늦는듯
 		{
 			visited[_x - 1] = true;
 			dist[_x - 1] = dist[_x] + 1;
