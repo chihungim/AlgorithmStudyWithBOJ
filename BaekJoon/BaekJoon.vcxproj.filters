@@ -73,7 +73,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="그래프 이론\DFS\10552.cpp">
+    <ClCompile Include="구현\2530.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

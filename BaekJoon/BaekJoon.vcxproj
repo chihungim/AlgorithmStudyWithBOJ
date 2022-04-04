@@ -148,7 +148,7 @@
     <ResourceCompile Include="BaekJoon.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="그래프 이론\DFS\10552.cpp" />
+    <ClCompile Include="구현\2530.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
