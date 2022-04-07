@@ -1,20 +1,36 @@
-#include <iostream>
-#include <stack>
+#include<iostream>
+#include<stack>
+#include <vector>
 
-using std::cin;
-using std::cout;
-using std::stack;
+using namespace std;
 
-//todo: 미해결 문제
+int main() {
+    int n, x, max(0);
+    cin >> n;
+    vector<char> ans;
+    stack<int> s;
+    while (n--) {
+        std::cin >> x;
+        if (x > max) {
+            for (int i = max + 1; i <= x; i++) {
+                s.push(i);
+                ans.push_back('+');
+            }
+        }
+        else
+            if (s.top() != x) {
+                std::cout << "NO";
+                return 0;
+            }
+        s.pop();
+        ans.push_back('-');
+        if (max < x) max = x;
+    }
 
-int main(int argc, char* argv[])
-{
-	stack<int> stk;
-	int t = 0;
-	cin >> t;
+    for(auto& a : ans)
+    {
+        cout << a << "\n";
+    }
 
-	for (int i = 0; i < t; i++)
-		stk.push(t);
-
-	
+    return 0;
 }
