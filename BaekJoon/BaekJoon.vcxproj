@@ -148,7 +148,7 @@
     <ResourceCompile Include="BaekJoon.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="구현\1439.cpp" />
+    <ClCompile Include="문자열\문자열 탐색\1786.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
