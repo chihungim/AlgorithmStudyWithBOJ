@@ -72,9 +72,4 @@
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="구현\11656.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
