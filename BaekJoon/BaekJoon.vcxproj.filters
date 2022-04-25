@@ -1,80 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="소스 파일\구현">
-      <UniqueIdentifier>{cfe60f66-7603-4309-8c16-c50ee0c604a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\그래프 이론">
-      <UniqueIdentifier>{0db5cad4-057b-4b90-bb6a-29408ee224d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\그래프 이론\BFS">
-      <UniqueIdentifier>{06069007-b3e3-4c4c-a0e3-3c823861cfa3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\그래프 이론\DFS">
-      <UniqueIdentifier>{c057fdd0-b966-42ae-8d0e-e6449aa1ad95}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\다이나믹 프로그래밍">
-      <UniqueIdentifier>{685eb342-9c29-4b74-b4d5-16f0eeb7fa2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\브루트포스 알고리즘">
-      <UniqueIdentifier>{31217141-b19d-4204-a269-9526159f354d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\수학">
-      <UniqueIdentifier>{353578b6-76ce-49d3-8525-c14a0f28b294}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조">
-      <UniqueIdentifier>{155fefac-25e2-42fc-baab-abb668dd5ed2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조\덱">
-      <UniqueIdentifier>{b56aa296-09bc-4a1f-93b7-48a80663e32d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조\큐">
-      <UniqueIdentifier>{a061caac-0649-440c-a19b-4edc65013d31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조\우선순위 큐">
-      <UniqueIdentifier>{d4be2916-7af7-43f3-9533-ebab4832e557}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조\집합과 맵">
-      <UniqueIdentifier>{19f3f7dc-ede1-45d8-a0df-acf6e6441f83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\자료구조\스택">
-      <UniqueIdentifier>{c530d750-8176-429e-998f-58a03efca3de}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\정렬">
-      <UniqueIdentifier>{505faa76-fbb8-4939-ada3-6211a6ec88f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\탐색">
-      <UniqueIdentifier>{09d68711-0f8f-4cd8-bfc0-74df878f8692}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\-분류 불가-">
-      <UniqueIdentifier>{846f54e1-f01f-4fdb-9259-003367e7550a}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BaekJoon.rc">
-      <Filter>리소스 파일</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="구현\1439.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
+    <ResourceCompile Include="BaekJoon.rc" />
   </ItemGroup>
 </Project>
