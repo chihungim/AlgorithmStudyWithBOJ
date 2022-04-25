@@ -72,12 +72,9 @@
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
-<<<<<<< HEAD
-=======
   <ItemGroup>
-    <ClCompile Include="문자열\문자열 탐색\1786.cpp">
+    <ClCompile Include="구현\1439.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
->>>>>>> 90b11e5c397c6c585cefa54e7d01cb77d528c636
 </Project>
