@@ -6,4 +6,7 @@
   <ItemGroup>
     <ResourceCompile Include="BaekJoon.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="구현\25083.cpp" />
+  </ItemGroup>
 </Project>
