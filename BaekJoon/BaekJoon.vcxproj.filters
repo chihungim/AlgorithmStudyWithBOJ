@@ -7,6 +7,6 @@
     <ResourceCompile Include="BaekJoon.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="그래프 이론\DFS\1303.cpp" />
+    <ClCompile Include="수학\24723.cpp" />
   </ItemGroup>
 </Project>
